@@ -13,4 +13,4 @@ Authorization:
 SkillGroups:
   - Format: API
     Settings:
-      OpenApiSpecUrl: https://github.com/samiguthub/copilotsecurity/blob/main/Second%20File.yaml
+      OpenApiSpecUrl: https://github.com/samiguthub/copilotsecurity/blob/main/Second%20File1.yaml

@@ -1,0 +1,34 @@
+openapi: 3.0.0
+
+info:
+  title: Defender Specific Alert Details Plugin
+  description: Skills for getting alert details via Graph API Call
+  version: "v1"
+
+servers:
+  - url: https://graph.microsoft.com/v1.0/security
+
+paths:
+  /alerts_v2:
+    get:
+      operationId: GetAlertIdsFromIncidentId
+      description: List all alert ids based on a user-provided incident id
+      parameters:
+        - in: query
+          name: $filter
+          schema:
+            type: string
+          required: true
+          description: A filter in the format of "incidentid eq id" where ID is an incident ID provided by the user.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  title:
+                    type: string
